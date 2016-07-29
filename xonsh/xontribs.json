@@ -27,24 +27,22 @@
   "url": "http://xon.sh",
   "description": ["Python virtual environment manager for xonsh."]
   },
- {"name": "prompt_ret_code",
-  "package": "xontrib-prompt-ret-code",
-  "url": "https://github.com/Siecje/xontrib-prompt-ret-code",
-  "description": ["Adds return code info to the prompt"]
-  },
- {"name": "xo",
-  "package": "exofrills",
-  "url": "https://github.com/scopatz/xo",
-  "description": ["Adds an 'xo' alias to run the exofrills text editor in the ",
-                  "current Python interpreter session. This shaves off a ",
-                  "bit of the startup time when running your favorite, minimal ",
-                  "text editor."]
-  },
  {"name": "apt_tabcomplete",
   "package": "xonsh-apt-tabcomplete",
   "url": "https://github.com/DangerOnTheRanger/xonsh-apt-tabcomplete",
   "description": ["Adds tabcomplete functionality to apt-get/apt-cache inside of xonsh."]
  },
+ {"name": "autoxsh",
+  "package": "xonsh-autoxsh",
+  "url": "https://github.com/Granitas/xonsh-autoxsh",
+  "description": ["Adds automatic execution of xonsh script files called",
+            "`.autoxsh` when enterting a directory with `cd` function"]
+ },
+ {"name": "avox",
+  "package": "xontrib-avox",
+  "url": "https://github.com/astronouth7303/xontrib-avox",
+  "description": ["Automatic (de)activation of virtual environments as you cd around"]
+ }
  {"name": "docker_tabcomplete",
   "package": "xonsh-docker-tabcomplete",
   "url": "https://github.com/xsteadfastx/xonsh-docker-tabcomplete",
@@ -55,6 +53,11 @@
   "url": "https://github.com/gforsyth/xonsh-pacman-tabcomplete",
   "description": ["Adds tabcomplete functionality to pacman inside of xonsh."]
  },
+ {"name": "prompt_ret_code",
+  "package": "xontrib-prompt-ret-code",
+  "url": "https://github.com/Siecje/xontrib-prompt-ret-code",
+  "description": ["Adds return code info to the prompt"]
+  },
  {"name": "scrapy_tabcomplete",
   "package": "xonsh-scrapy-tabcomplete",
   "url": "https://github.com/Granitas/xonsh-scrapy-tabcomplete",
@@ -65,31 +68,21 @@
   "url": "https://github.com/Granitas/xonsh-vox-tabcomplete",
   "description": ["Adds tabcomplete functionality to vox inside of xonsh."]
  },
- {"name": "autoxsh",
-  "package": "xonsh-autoxsh",
-  "url": "https://github.com/Granitas/xonsh-autoxsh",
-  "description": ["Adds automatic execution of xonsh script files called",
-	          "`.autoxsh` when enterting a directory with `cd` function"]
- },
+ {"name": "xo",
+  "package": "exofrills",
+  "url": "https://github.com/scopatz/xo",
+  "description": ["Adds an 'xo' alias to run the exofrills text editor in the ",
+                  "current Python interpreter session. This shaves off a ",
+                  "bit of the startup time when running your favorite, minimal ",
+                  "text editor."]
+  },
  {"name": "xonda",
   "package": "xonda",
   "url": "https://github.com/gforsyth/xonda",
   "description": ["A thin wrapper around conda with tab completion"]
- },
- {"name": "avox",
-  "package": "xontrib-avox",
-  "url": "https://github.com/astronouth7303/xontrib-avox",
-  "description": ["Automatic (de)activation of virtual environments as you cd around"]
  }
  ],
  "packages": {
-  "exofrills": {
-   "license": "WTFPL",
-   "url": "http://exofills.org",
-   "install": {
-    "conda": "conda install -c conda-forge xo",
-    "pip": "pip install exofrills"}
-   },
   "xonsh": {
    "license": "BSD 3-clause",
    "url": "http://xon.sh",
@@ -99,11 +92,18 @@
     "aura": "sudo aura -A xonsh",
     "yaourt": "yaourt -Sa xonsh"}
    },
-  "xontrib-prompt-ret-code": {
-   "license": "MIT",
-   "url": "https://github.com/Siecje/xontrib-prompt-ret-code",
+  "exofrills": {
+   "license": "WTFPL",
+   "url": "http://exofills.org",
    "install": {
-    "pip": "pip install xontrib-prompt-ret-code"
+    "conda": "conda install -c conda-forge xo",
+    "pip": "pip install exofrills"}
+   },
+  "xonda": {
+   "license": "MIT",
+   "url": "https://github.com/gforsyth/xonda",
+   "install": {
+    "pip": "pip install xonda"
    }
   },
   "xonsh-apt-tabcomplete": {
@@ -111,6 +111,13 @@
    "url": "https://github.com/DangerOnTheRanger/xonsh-apt-tabcomplete",
    "install": {
     "pip": "pip install xonsh-apt-tabcomplete"
+   }
+  },
+  "xonsh-autoxsh": {
+   "license": "GPLv3",
+   "url": "https://github.com/Granitas/xonsh-autoxsh",
+   "install": {
+    "pip": "pip install xonsh-autoxsh"
    }
   },
   "xonsh-docker-tabcomplete": {
@@ -141,25 +148,18 @@
     "pip": "pip install xonsh-vox-tabcomplete"
    }
   },
-  "xonsh-autoxsh": {
-   "license": "GPLv3",
-   "url": "https://github.com/Granitas/xonsh-autoxsh",
-   "install": {
-    "pip": "pip install xonsh-autoxsh"
-   }
-  },
-  "xonda": {
-   "license": "MIT",
-   "url": "https://github.com/gforsyth/xonda",
-   "install": {
-    "pip": "pip install xonda"
-   }
-  },
   "xontrib-avox": {
    "license": "GPLv3",
    "url": "https://github.com/astronouth7303/xontrib-avox",
    "install": {
     "pip": "pip install xontrib-avox"
+   }
+  },
+  "xontrib-prompt-ret-code": {
+   "license": "MIT",
+   "url": "https://github.com/Siecje/xontrib-prompt-ret-code",
+   "install": {
+    "pip": "pip install xontrib-prompt-ret-code"
    }
   }
  }
